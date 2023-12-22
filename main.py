@@ -33,7 +33,8 @@ while True:
     players = server.status()
     if players.players.online == 0:
         print("No one is online.")
-        time.sleep(5)
+        time.sleep(3)
     elif players.players.online > 0:
         send_notif()
+        print("Someone is online!")
         break
