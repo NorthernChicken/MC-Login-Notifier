@@ -5,6 +5,7 @@ from secrets import token, user
 
 '''
 * Made by NorthernChicken
+*Repo: https://github.com/NorthernChicken/MC-Login-Notifier
 * Desc: Playing on servers is only fun if you are playing with others. This script sends me a notification if someone logs on.
 '''
 
