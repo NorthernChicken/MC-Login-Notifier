@@ -35,10 +35,15 @@ with open('ip.txt', 'r') as file:
 server = JavaServer.lookup(ip)
 
 while True:
-    players = server.status()
-    if players.players.online == 0:
-        print("No one is online.")
-        notification_sent = False
-        time.sleep(3)
-    elif players.players.online > 0:
-        send_notif()
+    try:
+        players = server.status()
+        if players.players.online == 0:
+            print("No one is online.")
+            notification_sent = False
+            time.sleep(3)
+        elif players.players.online > 0:
+            send_notif()
+    except Exception as e:
+        print("Oops, there was an error. Re-trying in 5 seconds.")
+        time.sleep(5)
+        continue
