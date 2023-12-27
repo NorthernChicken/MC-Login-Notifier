@@ -9,3 +9,4 @@ Sends a push notification to your phone if someone logs into your Minecraft serv
 * Create a new API application
 * Get the API token and put it in 'secrets.py'
 * Download the Pushover app on Android or IOS and sign in.
+* Change the IP in "ip.txt" to the IP of the server you want to monitor
